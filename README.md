@@ -37,4 +37,5 @@ This project demonstrates how to build a simple **GoFiber** application followin
 ## References
 
 - [GoFiber Documentation](https://docs.gofiber.io)
+- [Clean Arquitecture Example](https://github.com/gofiber/recipes/tree/master/clean-architecture)
 - [MongoDB Documentation](https://docs.mongodb.com/)
