@@ -2,16 +2,16 @@ package presenter
 
 import (
 	"github.com/William-Ro/go-crud/pkg/entities"
-	"github.com/gofiber/fiber"
-	"go.mongodb.org/mongo-driver/bson/primitive"
+	"github.com/gofiber/fiber/v2"
+	"go.mongodb.org/mongo-driver/v2/bson"
 )
 
 // Employee is the presenter object which will be passed in the response by Handler
 type Employee struct {
-	ID         primitive.ObjectID `json:"id" bson:"_id,omitempty"`
-	First_Name string             `json:"first_name"`
-	Last_Name  string             `json:"last_name"`
-	Email      string             `json:"email"`
+	ID         bson.ObjectID `json:"id" bson:"_id,omitempty"`
+	First_Name string        `json:"first_name"`
+	Last_Name  string        `json:"last_name"`
+	Email      string        `json:"email"`
 }
 
 // EmployeeSuccessResponse is the singular SuccessResponse that will be passed in the response by
