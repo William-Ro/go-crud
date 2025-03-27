@@ -11,6 +11,7 @@ import (
 	"github.com/William-Ro/go-crud/pkg/employee"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/fiber/v2/middleware/cors"
+	"github.com/joho/godotenv"
 
 	"go.mongodb.org/mongo-driver/v2/mongo"
 	"go.mongodb.org/mongo-driver/v2/mongo/options"
@@ -38,10 +39,17 @@ func main() {
 }
 
 func databaseConnection() (*mongo.Database, context.CancelFunc, error) {
+
+	// Load the .env file
+	err := godotenv.Load()
+	if err != nil {
+		log.Fatal("Error loading .env file")
+	}
+
 	// Get the MongoDB URI from the environment variables
 	uri := os.Getenv("MONGODB_URI")
 	if uri == "" {
-		log.Fatal("You must set your 'MONGODB_URI' environment variable. See\n\t https://docs.mongodb.com/drivers/go/current/usage-examples/")
+		log.Fatal("You must set your 'MONGODB_URI' environment variable. Example\n\t MONGODB_URI=mongodb://admin:admin@localhost:27017 See\n\t https://docs.mongodb.com/drivers/go/current/usage-examples/")
 	}
 
 	// Set client options
