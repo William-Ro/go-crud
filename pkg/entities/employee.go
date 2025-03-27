@@ -16,7 +16,7 @@ type Employee struct {
 	UpdatedAt  time.Time          `json:"updatedAt" bson:"updatedAt"`
 }
 
-// DeleteRequest struct is used to parse Delete Requests for Books
+// DeleteRequest struct is used to parse Delete Requests for Employee
 type DeleteRequest struct {
 	ID string `json:"id"`
 }
