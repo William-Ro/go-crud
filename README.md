@@ -1,7 +1,5 @@
 # Employee Management CRUD
 
-[![Github](https://img.shields.io/static/v1?label=&message=Github&color=2ea44f&style=for-the-badge&logo=github)](https://github.com/yourusername/employee-management-clean-architecture) [![StackBlitz](https://img.shields.io/static/v1?label=&message=StackBlitz&color=2ea44f&style=for-the-badge&logo=StackBlitz)](https://stackblitz.com/github/yourusername/employee-management-clean-architecture)
-
 This project demonstrates how to implement **CRUD** in a **Go** application with **Fiber**, **GORM**, and **MongoDB** for **Employee Management**. It is based on a Clean Architecture example from the GoFiber documentation, modified to use the **MongoDB Go v2 driver** and the latest versions of **GoFiber** and related libraries.
 
 ## Description
